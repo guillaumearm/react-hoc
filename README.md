@@ -23,11 +23,11 @@ it does 3 things :
 __example with a very basic hoc :__
 ```js
 import React from 'react';
-import hoc from 'react-hoc';
+import reactHOC from 'react-hoc';
 
 import Dummy from './Dummy';
 
-const withDefaultColor = color => hoc(WrappedComponent => props => {
+const withDefaultColor = color => reactHOC(WrappedComponent => props => {
     return <WrappedComponent color={color} {...props} />
 }, color);
 const withDefaultBlue = withDefaultColor('blue');

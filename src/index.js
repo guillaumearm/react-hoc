@@ -8,11 +8,11 @@ const composeNames = (enhancerName, componentName) => (
     enhancerName ? `${enhancerName}(${componentName})` : componentName
 );
 
-const hoc = (enhancer, enhancerName, customStatics) => (Component) => {
+const reactHOC = (enhancer, enhancerName, customStatics) => (Component) => {
     const Enhanced = hoistNonReactStatics(enhancer(Component), Component, customStatics);
     Enhanced.WrappedComponent = Component.WrappedComponent || Component;
     Enhanced.displayName = composeNames(enhancerName, getDisplayName(Component));
     return Enhanced;
 };
 
-export default hoc;
+export default reactHOC;
