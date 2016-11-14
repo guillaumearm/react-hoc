@@ -15,7 +15,7 @@ it does 3 things :
 
 ### Installation
 
-`npm install --save guillaumearm/react-hoc`
+`npm install --save react-hoc`
 
 
 ### Usage
