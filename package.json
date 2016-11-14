@@ -2,7 +2,7 @@
   "name": "react-hoc",
   "version": "0.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist --ignore '*.spec.js'",
     "clean": "git reset HEAD -- ./dist ; git checkout ./dist",
