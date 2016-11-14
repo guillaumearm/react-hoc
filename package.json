@@ -13,7 +13,6 @@
     "wtest": "npm run watch-test",
     "version": "node scripts/version.js",
     "prepublish": "node scripts/prepublish.js",
-    "postpublish": "echo --- PUBLISHED ---",
     "lint": "eslint --max-warnings 0 src"
   },
   "repository": {
