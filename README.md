@@ -4,7 +4,7 @@
 
 > a higher order component creator helper
 
-`hoc :: (Enhancer, enhancerDisplayName) => Enhancer`
+`reactHOC :: (Enhancer, enhancerDisplayName) => Enhancer`
 
 __hoc is a higher order enhancer__ :
 it take one enhancer and return one enhancer.
