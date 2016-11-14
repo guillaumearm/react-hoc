@@ -1,6 +1,6 @@
 # react-hoc
 
-[![NPM](https://nodei.co/npm/react-hoc.png?compact=true)](https://nodei.co/npm/react-hoc/)
+![NPM](https://nodei.co/npm/react-hoc.png?compact=true)
 
 > a higher order component creator helper
 
