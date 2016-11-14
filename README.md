@@ -1,5 +1,7 @@
 # react-hoc
 
+[![NPM](https://nodei.co/npm/react-hoc.png?compact=true)](https://nodei.co/npm/react-hoc/)
+
 > a higher order component creator helper
 
 `hoc :: (Enhancer, enhancerDisplayName) => Enhancer`
@@ -16,7 +18,6 @@ it does 3 things :
 ### Installation
 
 `npm install --save react-hoc`
-
 
 ### Usage
 
