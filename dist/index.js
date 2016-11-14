@@ -18,7 +18,7 @@ var composeNames = function composeNames(enhancerName, componentName) {
     return enhancerName ? enhancerName + '(' + componentName + ')' : componentName;
 };
 
-var hoc = function hoc(enhancer, enhancerName, customStatics) {
+var reactHOC = function reactHOC(enhancer, enhancerName, customStatics) {
     return function (Component) {
         var Enhanced = (0, _hoistNonReactStatics2.default)(enhancer(Component), Component, customStatics);
         Enhanced.WrappedComponent = Component.WrappedComponent || Component;
@@ -27,4 +27,4 @@ var hoc = function hoc(enhancer, enhancerName, customStatics) {
     };
 };
 
-exports.default = hoc;
+exports.default = reactHOC;
