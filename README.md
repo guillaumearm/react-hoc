@@ -8,7 +8,7 @@ __hoc is a higher order enhancer__ :
 it take one enhancer and return one enhancer.
 
 it does 3 things :
-  - hoist non react statics
+  - [hoist non react statics](https://www.npmjs.com/package/hoist-non-react-statics)
   - hoist/set WrappedComponent property
   - hoist/set displayName property
 
