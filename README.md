@@ -35,7 +35,7 @@ const withDefaultBlue = withDefaultColor('blue');
 const BlueComponent = withDefaultBlue(Dummy);
 BlueComponent.displayName // => "blue(Dummy)"
 ```
-if `hoc` second parameter is missing, __displayName will be hoisted__.
+if `reactHOC` second parameter is missing, __displayName will be hoisted__.
 ```js
 const noColor = withDefaultColor();
 const Test = noColor(Dummy);
