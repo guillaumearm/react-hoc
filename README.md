@@ -1,5 +1,4 @@
-react-hoc
-=====
+# react-hoc
 
 > a higher order component creator helper
 
