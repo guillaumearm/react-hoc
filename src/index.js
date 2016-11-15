@@ -9,12 +9,16 @@ const composeNames = (enhancerName, componentName) => (
 );
 
 const reactHOC = (enhancer, enhancerName, customStatics) => (Component) => {
+    const enhancedDisplayName = composeNames(enhancerName, getDisplayName(Component));
     const EnhancedComponent = enhancer(Component);
-    if (Component === EnhancedComponent) return EnhancedComponent;
+    if (Component === EnhancedComponent) {
+        EnhancedComponent.displayName = enhancedDisplayName;
+        return EnhancedComponent;
+    }
 
     const HoistedEnhanced = hoistNonReactStatics(EnhancedComponent, Component, customStatics);
     HoistedEnhanced.WrappedComponent = Component.WrappedComponent || Component;
-    HoistedEnhanced.displayName = composeNames(enhancerName, getDisplayName(Component));
+    HoistedEnhanced.displayName = enhancedDisplayName;
     return HoistedEnhanced;
 };
 
