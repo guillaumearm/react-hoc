@@ -26,16 +26,16 @@ import reactHOC from 'react-hoc';
 
 import Dummy from './Dummy';
 
-const withDefaultColor = color => reactHOC(WrappedComponent => props => {
+const withColor = color => reactHOC(WrappedComponent => props => {
     return <WrappedComponent color={color} {...props} />
 }, color);
-const withDefaultBlue = withDefaultColor('blue');
-const BlueComponent = withDefaultBlue(Dummy);
+const withBlue = withColor('blue');
+const BlueComponent = withBlue(Dummy);
 BlueComponent.displayName // => "blue(Dummy)"
 ```
 if `reactHOC` second parameter is missing, __displayName will be hoisted__.
 ```js
-const noColor = withDefaultColor();
+const noColor = withColor();
 const Test = noColor(Dummy);
 Test.displayName // => "Dummy"
 ```
