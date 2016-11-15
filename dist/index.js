@@ -20,10 +20,13 @@ var composeNames = function composeNames(enhancerName, componentName) {
 
 var reactHOC = function reactHOC(enhancer, enhancerName, customStatics) {
     return function (Component) {
-        var Enhanced = (0, _hoistNonReactStatics2.default)(enhancer(Component), Component, customStatics);
-        Enhanced.WrappedComponent = Component.WrappedComponent || Component;
-        Enhanced.displayName = composeNames(enhancerName, getDisplayName(Component));
-        return Enhanced;
+        var EnhancedComponent = enhancer(Component);
+        if (Component === EnhancedComponent) return EnhancedComponent;
+
+        var HoistedEnhanced = (0, _hoistNonReactStatics2.default)(EnhancedComponent, Component, customStatics);
+        HoistedEnhanced.WrappedComponent = Component.WrappedComponent || Component;
+        HoistedEnhanced.displayName = composeNames(enhancerName, getDisplayName(Component));
+        return HoistedEnhanced;
     };
 };
 
