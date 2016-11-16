@@ -15,7 +15,7 @@ var getDisplayName = function getDisplayName(WrappedComponent) {
 };
 
 var composeNames = function composeNames(enhancerName, componentName) {
-    return enhancerName ? enhancerName + '(' + componentName + ')' : componentName;
+    return enhancerName ? enhancerName + '(' + componentName + ')' : 'Hoc(' + componentName + ')';
 };
 
 var reactHOC = function reactHOC(enhancer, enhancerName, customStatics) {
