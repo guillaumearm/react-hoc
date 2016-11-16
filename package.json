@@ -5,14 +5,14 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist --ignore '*.spec.js'",
-    "clean": "git reset HEAD -- ./dist ; git checkout ./dist",
-    "clean-dist": "rimraf ./dist",
-    "test": "jest --coverage",
-    "test-all": "npm run -s prepublish",
-    "watch-test": "jest --watch --coverage",
-    "wtest": "npm run watch-test",
-    "version": "node scripts/version.js",
-    "prepublish": "node scripts/prepublish.js",
+    "clean": "rimraf ./dist",
+    "test": "npm run -s test:all",
+    "test:all": "node scripts/test.js",
+    "test:basic": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch --coverage",
+    "preversion": "npm run -s test:all",
+    "prepublish": "npm run -s test:all",
     "lint": "eslint --max-warnings 0 src"
   },
   "repository": {
