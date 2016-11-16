@@ -33,9 +33,9 @@ const withDefaultBlue = withDefaultColor('blue');
 const BlueComponent = withDefaultBlue(Dummy);
 BlueComponent.displayName // => "blue(Dummy)"
 ```
-if `reactHOC` enhancerDisplayName parameter is missing, `hoc()` will be used.
+if `reactHOC` enhancerDisplayName parameter is missing, `Hoc()` will be used.
 ```js
 const noColor = withDefaultColor();
 const Test = noColor(Dummy);
-Test.displayName // => "Dummy"
+Test.displayName // => "Hoc(Dummy)"
 ```
