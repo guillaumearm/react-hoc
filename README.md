@@ -4,7 +4,7 @@
 
 `reactHOC :: (Enhancer, enhancerDisplayName) => Enhancer`
 
-__hoc is a higher order enhancer__ :
+__reactHOC is a higher order enhancer__ :
 it take one enhancer and return one enhancer.
 
 it does 3 things :
