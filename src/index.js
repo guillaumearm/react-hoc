@@ -1,14 +1,14 @@
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
-const getDisplayName = WrappedComponent => (
-    WrappedComponent.displayName || WrappedComponent.name || 'Component'
-);
-
 const composeNames = (enhancerName, componentName) => (
     enhancerName ? `${enhancerName}(${componentName})` : `Hoc(${componentName})`
 );
 
-const reactHOC = (enhancer, enhancerName, customStatics) => (Component) => {
+export const getDisplayName = WrappedComponent => (
+    WrappedComponent.displayName || WrappedComponent.name || 'Component'
+);
+
+export const reactHOC = (enhancer, enhancerName, customStatics) => (Component) => {
     const enhancedDisplayName = composeNames(enhancerName, getDisplayName(Component));
     const EnhancedComponent = enhancer(Component);
     if (Component === EnhancedComponent) {

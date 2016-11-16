@@ -39,3 +39,22 @@ const noColor = withColor();
 const Test = noColor(Dummy);
 Test.displayName // => "Hoc(Dummy)"
 ```
+
+### Utils
+`getDisplayName :: (Component) => String`
+
+__example :__
+```js
+import React from 'react';
+import { reactHOC, getDisplayName } from 'react-hoc';
+
+const myEnhancer = reactHOC(WrappedComponent => {
+  return class extends Component {
+      // set your own displayName
+    static displayName = `Enhanced [${getDisplayName(WrappedComponent)}]`
+
+    render() { return <WrappedComponent /> }
+  };
+});
+const EnhancedDummy = myEnhancer(Dummy);
+```
