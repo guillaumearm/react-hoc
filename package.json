@@ -12,7 +12,7 @@
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch --coverage",
     "preversion": "npm run -s test:all",
-    "prepublish": "npm run -s test:all",
+    "prepare": "npm run -s test:all",
     "lint": "eslint --max-warnings 0 src"
   },
   "repository": {
