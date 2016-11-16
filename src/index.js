@@ -5,7 +5,7 @@ const getDisplayName = WrappedComponent => (
 );
 
 const composeNames = (enhancerName, componentName) => (
-    enhancerName ? `${enhancerName}(${componentName})` : componentName
+    enhancerName ? `${enhancerName}(${componentName})` : `Hoc(${componentName})`
 );
 
 const reactHOC = (enhancer, enhancerName, customStatics) => (Component) => {

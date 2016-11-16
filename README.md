@@ -33,9 +33,9 @@ const withBlue = withColor('blue');
 const BlueComponent = withBlue(Dummy);
 BlueComponent.displayName // => "blue(Dummy)"
 ```
-if `reactHOC` second parameter is missing, __displayName will be hoisted__.
+if `reactHOC` enhancerDisplayName parameter is missing, `Hoc()` will be used.
 ```js
 const noColor = withColor();
 const Test = noColor(Dummy);
-Test.displayName // => "Dummy"
+Test.displayName // => "Hoc(Dummy)"
 ```
