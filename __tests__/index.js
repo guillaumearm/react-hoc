@@ -1,4 +1,4 @@
-import * as index from 'src';
+import * as index from '../src';
 
 /* eslint-disable no-console */
 describe('react-hoc', () => {
