@@ -8,7 +8,7 @@ const composeNames = (enhancerName, componentName) => (
     enhancerName ? `${enhancerName}(${componentName})` : `Hoc(${componentName})`
 );
 
-const reactHOC = (enhancer, enhancerName, customStatics) => (Component) => {
+export const reactHOC = (enhancer, enhancerName, customStatics) => (Component) => {
     const enhancedDisplayName = composeNames(enhancerName, getDisplayName(Component));
     const EnhancedComponent = enhancer(Component);
     if (Component === EnhancedComponent) {
